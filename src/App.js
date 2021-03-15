@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 
 function App() {
+    const [naamValue, setNaamValue] = React.useState('');
+    const [leeftijdValue, setLeeftijdValue] = React.useState('');
   return (
     <div>
         <form>
@@ -10,12 +12,16 @@ function App() {
             <label for="naam"> Naam: </label>
             <input
             type="text"
+            value={naamValue}
+            onChange={(e) => setNaamValue(e.target.value)}
             />
             <br/>
             <label for="leefijd"> Leeftijd: </label>
             <input
             type = "text"
             placeholder="0"
+            value={leeftijdValue}
+            onChange={(e) => setLeeftijdValue(e.target.value)}
             />
         </fieldset>
         </form>
